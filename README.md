@@ -6,14 +6,14 @@ Tested only outside the ITK source tree.
 mkdir ITKVTKImageViewer; cd ITKVTKImageViewer
 git clone https://github.com/phcerdan/ITKVTKImageViewer src
 mkdir build; cd build
-cmake -DVTK_DIR=/path/to/VTK-config.cmake -DITK_DIR=/path/to/ITK-config.cmake ../src
+cmake -DVTK_DIR=/path/to/VTK_CONFIG_FOLDER -DITK_DIR=/path/to/ITK_CONFIG_FOLDER ../src
 make -j5
 ```
 
 Or with `ninja`:
 
 ```bash
-cmake -GNinja -DVTK_DIR=/path/to/VTK-config.cmake -DITK_DIR=/path/to/ITK-config.cmake ../src
+cmake -GNinja -DVTK_DIR=/path/to/VTK_CONFIG_FOLDER -DITK_DIR=/path/to/ITK_CONFIG_FOLDER ../src
 ninja
 ```
 
@@ -29,4 +29,10 @@ Or optionally with a title for the window:
 
 ```bash
 ./app/runViewImage /path/to/image "Tittle"
+```
+
+To run the examples:
+```bash
+./app/runViewImage ../src/examples/otsu.tif title_for_otsu &
+./app/runViewImage ../src/examples/checker2D.jpg "My 2D image" &
 ```

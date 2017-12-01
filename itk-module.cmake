@@ -1,6 +1,6 @@
 set(DOCUMENTATION "A simple Image Viewer using VTK, it requires ITKVtkGlue")
 
-itk_module(IsotropicWavelets
+itk_module(ITKVTKImageViewer
   DEPENDS
     ITKImageFunction
     ITKFFT
@@ -13,4 +13,3 @@ itk_module(IsotropicWavelets
   DESCRIPTION
   "${DOCUMENTATION}"
   )
-endif()

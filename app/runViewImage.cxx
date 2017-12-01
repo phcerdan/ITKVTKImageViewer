@@ -24,7 +24,8 @@ using namespace std;
 using namespace itk;
 
 int
-runViewImage(int argc, char* argv[])
+// runViewImage(int argc, char* argv[])
+main(int argc, char* argv[])
 {
   if ( argc < 2 || argc == 4 || argc > 5 )
     {
